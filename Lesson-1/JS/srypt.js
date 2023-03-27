@@ -24,6 +24,7 @@ appData.expenses.amount2 = `${questionExpenses2} : ${questionAmount2}`;
 
 // Выводим на экран пользователя бюджет за 1 день из расчета, что у нас месяц = 30 дней
 alert(`Ваш бюджет на месяц =  ${appData.moneyData / 30}`);
+console.log(appData);
 
 
 
