@@ -13,6 +13,7 @@ let appData = {
 }
 
 /* задаем пользовалю вопросы по 2 раза */
+/* используем цикл for */
 for (let i = 0; i < 2; i++) {
     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
     let b = +prompt('Во сколько обойдется?', '');
@@ -26,6 +27,43 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
+
+/* используем цикл while */
+// let i = 0;
+// while (i < 2) {
+//     i++;
+//     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+//     let b = +prompt('Во сколько обойдется?', '');
+
+//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
+//         a != '' && b != '' && a.length < 50) {
+//         console.log('done')
+//         appData.expenses[a] = b;
+//     } else {
+//         alert('Вы допустили ошибку, попробуйте еще раз');
+//         i--;
+//     }
+// }
+
+/* Используем цикл do while */
+// let i = 0;
+// do {
+//     i++;
+//     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+//     let b = +prompt('Во сколько обойдется?', '');
+
+//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
+//         a != '' && b != '' && a.length < 50) {
+//         console.log('done')
+//         appData.expenses[a] = b;
+//     } else {
+//         alert('Вы допустили ошибку, попробуйте еще раз');
+//         i--;
+//     }
+// }
+
+// while (i < 2)
+
 
 
 appData.moneyPerDay = appData.budget / 30; // Передаем новый параметр объекта "бюджет на 1 день"
