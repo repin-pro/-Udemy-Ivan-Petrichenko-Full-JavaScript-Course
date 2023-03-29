@@ -23,8 +23,7 @@ let expensesItem = document.querySelectorAll('.expenses-item'), //* Получа
     percentValue = document.querySelector('#percent'), // Поле процент
     yearValue = document.querySelector('.year-value'), // Поле год
     monthValue = document.querySelector('.month-value'), // Поле месяц
-    dayValue = document.querySelector('.day-value'), // Поле день
-    btnAll = document.querySelectorAll('button'); // получаем все кнопки
+    dayValue = document.querySelector('.day-value'); // Поле день
 
 /* Отключаем все кнопки, кроме "начать расчет" */
 btnApproveUp.setAttribute('disabled', true);
@@ -71,7 +70,8 @@ btnApproveUp.addEventListener('click', function () {
         }
     }
     expensesValue.textContent = sum;
-    return sum;
+    sumExpenses = sum;
+    return sumExpenses;
 });
 
 /* необязательные расходы */
@@ -86,7 +86,7 @@ btnApproveDown.addEventListener('click', function () {
 /* Расчет дневного бюджета */
 btnApproveCalc.addEventListener('click', function () {
     if (appData.budget != undefined) {
-        appData.moneyPerDay = (appData.budget + sum / 30).toFixed(); // Складываем общий бюджет с суммой обязательных расходов и делим на 30 дней
+        appData.moneyPerDay = (appData.budget + sumExpenses / 30).toFixed(); // Складываем общий бюджет с суммой обязательных расходов и делим на 30 дней
         daybudgetValue.textContent = appData.moneyPerDay;
 
         if (appData.moneyPerDay < 13000) {
