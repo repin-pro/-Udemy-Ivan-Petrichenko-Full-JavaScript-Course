@@ -2,8 +2,8 @@ let menuItems = document.querySelectorAll('.menu-item'), // находим вс�
     menu = document.querySelector('.menu'), // Находим класс menu куда будем помещать новый пункт меню
     menuItem = document.createElement('li'), //создаем пункт меню
     title = document.querySelector('.title'), // Нахдоим класс заголовка
-    adv = document.querySelector('.adv'); // Находим класс рекламного блока
-answer = document.querySelector('#prompt') // нахдоим ID prompt
+    adv = document.querySelector('.adv'), // Находим класс рекламного блока
+    answer = document.querySelector('#prompt'); // нахдоим ID prompt
 
 menu.appendChild(menuItem); // Добавляем в меню наш созданный пункт меню
 menuItem.classList.add('menu-item'); // Добавляем класс .menu-item к пункту меню 
