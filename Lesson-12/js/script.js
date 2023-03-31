@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     // Таймер
-    let deadline = '2023-03-31';
+    let deadline = '2024-03-31';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()), //Дата дедлайна минус дата которая сейчас
